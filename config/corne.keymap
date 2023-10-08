@@ -13,29 +13,31 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-        //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
+/*
+ |  TAB |  Q  |  W  |  E  |  R  |  T  |.....|  Y  |  U   |  I  |  O  |  P  | BKSP |
+ | CTRL |  A  |  S  |  D  |  F  |  G  |.....|  H  |  J   |  K  |  L  |  ;  |  '   |
+ | SHFT |  Z  |  X  |  C  |  V  |  B  |.....|  N  |  M   |  ,  |  .  |  /  | ESC  |
+                    | GUI | LWR | ENT |.....| SPC | RSE  | ALT |
+*/ 
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp RET   &kp SPACE &mo 2 &kp RALT
+/*Right_Side*/   &kp TAB   &kp Q &kp W &kp E &kp R &kp T     /*Left_Side*/   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+/*Right_Side*/   &kp LCTRL &kp A &kp S &kp D &kp F &kp G     /*Left_Side*/   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+/*Right_Side*/   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B     /*Left_Side*/   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+/*Right_Side*/                   &kp LGUI    &mo 1 &kp RET   /*Left_Side*/   &kp SPACE &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | ENT |   | SPC |     | ALT |
+/*
+ |  TAB |  BT1   |  BT2   |      |  +  |     |.....|  1  |  2  |  3  |     | UP  | BKSP |
+ | BTCLR|  BT3   |  BT4   |      |  -  |     |.....|  4  |  5  |  6  | LFT |     | RGT  |
+ | SHFT |  BT5   |        |      |  *  |     |.....|  7  |  8  |  9  |     | DWN |      |
+                          | GUI  |  /  | ENT |.....| SPC |  0  | ALT |
+*/
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp RET      &kp SPACE  &trans   &kp RALT
+/*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 1 &trans   &kp PLUS  &trans     /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans    &kp UP &kp BSPC
+/*Right_Side*/ &bt BT_CLR &bt BT_SEL 2  &bt BT_SEL 3 &trans   &kp MINUS &trans     /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp RIGHT &trans &kp LEFT
+/*Right_Side*/ &kp LSHFT  &bt BT_SEL N4 &trans       &trans   &kp AMPS  &trans     /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans    &kp DOWN &trans
+/*Right_Side*/                                       &kp LGUI &kp FSLH  &kp RET    /*Left_Side*/  &kp SPACE  &kp N0   &kp RALT
                         >;
                 };
 
