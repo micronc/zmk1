@@ -34,9 +34,9 @@
                           | GUI  |  /  | ENT |.....| SPC |  0  | ALT |
 */
                         bindings = <
-/*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 1 &trans   &kp PLUS  &trans     /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans    &kp UP &bt BT_CLR
-/*Right_Side*/ &bt DEL    &bt BT_SEL 2  &bt BT_SEL 3 &trans   &kp MINUS &trans     /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp RIGHT &trans &kp LEFT
-/*Right_Side*/ &kp LSHFT  &bt BT_SEL N4 &trans       &trans   &kp AMPS  &trans     /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans    &kp DOWN &trans
+/*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 1 &trans   &kp PLUS  &trans     /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans    &kp UP    &bt BT_CLR
+/*Right_Side*/ &bt DEL    &bt BT_SEL 2  &bt BT_SEL 3 &trans   &kp MINUS &trans     /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp LEFT  &trans    &kp RIGHT
+/*Right_Side*/ &kp LSHFT  &bt BT_SEL N4 &trans       &trans   &kp AMPS  &trans     /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans    &kp DOWN  &trans
 /*Right_Side*/                                       &kp LGUI &kp FSLH  &kp RET    /*Left_Side*/  &kp SPACE  &kp N0   &kp RALT
                         >;
                 };
