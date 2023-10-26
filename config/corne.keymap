@@ -16,28 +16,28 @@
 /*
  | ESC  |  Q  |  W  |  E  |  R  |  T  |.....|  Y  |  U   |  I  |  O  |  P  | BKSP  |
  | TAB  |  A  |  S  |  D  |  F  |  G  |.....|  H  |  J   |  K  |  L  |  '  | ;     |
- | SHFT |  Z  |  X  |  C  |  V  |  B  |.....|  N  |  M   |  ,  |  .  |  /  | PG_DN |
-                   | CTRL | MO1 | ALT |.....| SPC | ENT  | MO2 |
+ | SHFT |  Z  |  X  |  C  |  V  |  B  |.....|  N  |  M   |  ,  |  .  |  /  | RET |
+                   | CTRL | LGUI | ALT |.....| SPC | MO1  | MO2 |
 */ 
                         bindings = <
 /*Right_Side*/   &kp ESC   &kp Q &kp W &kp E &kp R &kp T     /*Left_Side*/   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-/*Right_Side*/   &kp TAB  &kp A &kp S &kp D &kp F &kp G      /*Left_Side*/   &kp H &kp J  &kp K     &kp L   &kp SQT  &kp SEMI
-/*Right_Side*/   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B     /*Left_Side*/   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp PG_DN
-/*Right_Side*/                   &kp LCTRL &mo 1 &kp RALT     /*Left_Side*/   &kp SPACE &kp RET  &mo 2 
+/*Right_Side*/   &kp TAB  &kp A &kp S &kp D &kp F &kp G      /*Left_Side*/   &kp H &kp J  &kp K     &kp L   &kp SEMI  &kp SQT
+/*Right_Side*/   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B     /*Left_Side*/   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
+/*Right_Side*/               &kp LCTRL &kp LGUI &kp RALT     /*Left_Side*/   &kp SPACE &mo1  &mo 2 
                         >;
                 };
                 lower_layer {
 /*
- |  TAB |  BT1   |  BT2   |      |  +  |     |.....|  1  |  2  |  3  |     | UP  | DEL  |
- |BT_CLR|  BT3   |  BT4   |      |  -  |     |.....|  4  |  5  |  6  | LFT |     | RGT  |
- | SHFT |  BT5   |        |      |  *  |     |.....|  7  |  8  |  9  |     | DWN |      |
-                          | GUI  |  /  | ENT |.....| SPC |  0  | ALT |
+ |  TAB |  BT1  |  BT4   |      |     |  +  |.....|  1  |  2  |  3  |     | UP  | DEL  |
+ |      |  BT2  |  BT5   |      |     |  -  |.....|  4  |  5  |  6  | LFT |     | RGT  |
+ | SHFT |  BT3  | BT_CLR |      |     |  &  |.....|  7  |  8  |  9  |     | DWN |      |
+                         | PG_DN | PG_UP | / |.....| SPC |  0  | ALT |
 */
                         bindings = <
-/*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 1 &trans   &kp PLUS  &trans     /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans    &kp UP &kp DEL
-/*Right_Side*/ &bt BT_CLR &bt BT_SEL 2  &bt BT_SEL 3 &trans   &kp MINUS &trans     /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp LEFT &trans &kp RIGHT
-/*Right_Side*/ &kp LSHFT  &bt BT_SEL N4 &trans       &trans   &kp AMPS  &trans     /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans    &kp DOWN &trans
-/*Right_Side*/                                       &kp LGUI &kp FSLH  &kp RET    /*Left_Side*/  &kp SPACE  &kp N0   &kp RALT
+/*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 3  &trans  &trans &kp PLUS       /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans    &kp UP &kp DEL
+/*Right_Side*/ &trans     &bt BT_SEL 1  &bt BT_SEL N4 &trans  &trans &kp MINUS      /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp LEFT &trans &kp RIGHT
+/*Right_Side*/ &kp LSHFT  &bt BT_SEL 2  &bt BT_CLR    &trans  &trans &kp AMPS       /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans    &kp DOWN &trans
+/*Right_Side*/                                       &kp PG_DN &kp PG_UP &kp FSLH   /*Left_Side*/  &kp SPACE  &kp N0   &kp RALT
                         >;
                 };
 
