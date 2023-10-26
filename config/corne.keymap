@@ -36,8 +36,8 @@
                         bindings = <
 /*Right_Side*/ &kp TAB    &bt BT_SEL 0  &bt BT_SEL 3  &trans  &trans &kp PLUS       /*Left_Side*/  &kp N1   &kp N2   &kp N3 &trans   &kp UP   &kp DEL
 /*Right_Side*/ &trans     &bt BT_SEL 1  &bt BT_SEL N4 &trans  &trans &kp MINUS      /*Left_Side*/  &kp N4   &kp N5   &kp N6 &kp LEFT &trans   &kp RIGHT
-/*Right_Side*/ &kp LSHFT  &bt BT_SEL 2  &bt BT_CLR    &trans  &trans &kp AMPS       /*Left_Side*/  &kp N7   &kp N8   &kp N9 &trans   &kp DOWN &trans
-/*Right_Side*/                                       &kp PG_DN &kp PG_UP &kp FSLH   /*Left_Side*/  &kp SPACE  &kp N0   &kp RALT
+/*Right_Side*/ &kp LSHFT  &bt BT_SEL 2  &bt BT_CLR    &trans  &trans &kp AMPS       /*Left_Side*/  &kp N7   &kp N8   &kp N9 &kp N0   &kp DOWN &trans
+/*Right_Side*/                                       &kp PG_DN &kp PG_UP &kp FSLH   /*Left_Side*/  &kp SPACE  &trans   &kp RALT
                         >;
                 };
 
